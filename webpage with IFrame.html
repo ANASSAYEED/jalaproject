@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes and Marquee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        marquee {
+            font-size: 1.2em;
+            background-color: #ffecb3;
+            padding: 10px;
+            color: #333;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Iframes and Marquee Demo</h1>
+
+    <!-- Marquee element for scrolling text -->
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+        Welcome to the Webpage! This text is scrolling across the screen using the Marquee element. Stay tuned for more updates.
+    </marquee>
+
+    <!-- Iframe for embedding an external webpage -->
+    <h2>Embedded Iframe Example</h2>
+    <iframe src="https://www.wikipedia.org" title="Wikipedia"></iframe>
+
+    <!-- Another marquee example -->
+    <marquee behavior="alternate" direction="right" scrollamount="8" style="background-color: #dff0d8;">
+        This text scrolls back and forth using the "alternate" behavior.
+    </marquee>
+
+    <h2>More Iframes</h2>
+    <p>Here’s another iframe, this time displaying the Mozilla website:</p>
+    <iframe src="https://www.mozilla.org" title="Mozilla" allowfullscreen></iframe>
+
+</div>
+
+</body>
+</html>

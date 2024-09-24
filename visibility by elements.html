@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Display Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .hidden {
+            visibility: hidden; /* Element is hidden but still occupies space */
+        }
+
+        .visible {
+            visibility: visible; /* Element is visible */
+        }
+
+        .collapse {
+            visibility: collapse; /* Only applicable for table rows */
+        }
+
+        .none {
+            display: none; /* Element is removed from the document flow */
+        }
+
+        .inline {
+            display: inline; /* Element is inline */
+        }
+
+        .block {
+            display: block; /* Element takes full width */
+        }
+
+        .contents {
+            display: contents; /* Parent element is removed but children are rendered */
+        }
+
+        .list-item {
+            display: list-item; /* Element is a list item */
+        }
+
+        .box {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Visibility and Display Properties</h1>
+
+    <div class="box visible" id="visibilityBox">This box is visible</div>
+    <div class="box hidden" id="visibilityHiddenBox">This box is hidden</div>
+    <div class="box" id="collapseBox">This row will collapse in a table.</div>
+
+    <h2>Toggle Visibility</h2>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+    <button onclick="collapse()">Collapse</button>
+
+    <h2>Display Types</h2>
+    <div class="box" id="displayBox">Display Box</div>
+    <button onclick="setDisplayNone()">Display: None</button>
+    <button onclick="setDisplayInline()">Display: Inline</button>
+    <button onclick="setDisplayBlock()">Display: Block</button>
+    <button onclick="setDisplayContents()">Display: Contents</button>
+    <button onclick="setDisplayListItem()">Display: List Item</button>
+
+    <h2>List Example</h2>
+    <ul>
+        <li class="list-item">List Item 1</li>
+        <li class="list-item">List Item 2</li>
+    </ul>
+
+    <script>
+        function toggleVisibility() {
+            const box = document.getElementById('visibilityBox');
+            box.classList.toggle('hidden');
+            box.classList.toggle('visible');
+        }
+
+        function collapse() {
+            const collapseBox = document.getElementById('collapseBox');
+            collapseBox.classList.toggle('collapse');
+        }
+
+        function setDisplayNone() {
+            const displayBox = document.getElementById('displayBox');
+            displayBox.className = 'box none';
+        }
+
+        function setDisplayInline() {
+            const displayBox = document.getElementById('displayBox');
+            displayBox.className = 'box inline';
+        }
+
+        function setDisplayBlock() {
+            const displayBox = document.getElementById('displayBox');
+            displayBox.className = 'box block';
+        }
+
+        function setDisplayContents() {
+            const displayBox = document.getElementById('displayBox');
+            displayBox.className = 'box contents';
+        }
+
+        function setDisplayListItem() {
+            const displayBox = document.getElementById('displayBox');
+            displayBox.className = 'box list-item';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create exp.Target Attribute</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Target Attribute Examples</h1>
+    
+    <!-- Open Link in the Same Tab -->
+    <a href="https://www.wikipedia.org" target="_self">Open Wikipedia in the Same Tab</a>
+
+    <!-- Open Link in a New Tab -->
+    <a href="https://www.google.com" target="_blank">Open Google in a New Tab</a>
+
+    <!-- Open Link in a Specific Frame -->
+    <iframe src="https://www.example.com" name="iframe_example" width="100%" height="200" style="border: 1px solid #ccc; margin-top: 10px;"></iframe>
+    <a href="https://www.mozilla.org" target="iframe_example">Open Mozilla in the Above Frame</a>
+
+    <!-- Open Link in a Parent Window -->
+    <a href="https://www.github.com" target="_parent">Open GitHub in the Parent Frame</a>
+
+    <!-- Open Link in the Full Body of the Window (replacing all frames) -->
+    <a href="https://www.apple.com" target="_top">Open Apple in the Full Window</a>
+</div>
+
+</body>
+</html>

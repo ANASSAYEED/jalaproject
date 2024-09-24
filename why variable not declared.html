@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode Example</title>
+</head>
+<body>
+
+    <h1>JavaScript Strict Mode</h1>
+
+    <!-- Button to trigger the strict mode example -->
+    <button onclick="strictModeExample()">Run Strict Mode Example</button>
+
+    <!-- Div to show the output -->
+    <div id="output"></div>
+
+    <script>
+        function strictModeExample() {
+            'use strict';  // Enable strict mode
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';  // Clear any previous content
+
+            try {
+                // Trying to assign a value to an undeclared variable
+                undeclaredVariable = 10;  // This will cause an error in strict mode
+            } catch (error) {
+                // Catching the error and displaying it
+                outputDiv.innerHTML += `<p>Error: ${error.message}</p>`;
+            }
+
+            // Demonstrating that declared variables work fine
+            let declaredVariable = 5;
+            outputDiv.innerHTML += `<p>Declared Variable Value: ${declaredVariable}</p>`;
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!--JS OUTPUT HEAR
+Error: undeclaredVariable is not defined
+Declared Variable Value: 5
+-->

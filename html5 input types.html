@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+        }
+        .form-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input,
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .form-container input[type="range"] {
+            width: 100%;
+        }
+        .form-container input[type="color"] {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Create HTML5 Input Types</h1>
+    <form action="#" method="POST">
+        <!-- Number Input -->
+        <label for="age">Age (Number):</label>
+        <input type="number" id="age" name="age" min="1" max="100" placeholder="Enter your age">
+
+        <!-- Range Input -->
+        <label for="volume">Volume (Range):</label>
+        <input type="range" id="volume" name="volume" min="0" max="100">
+
+        <!-- Color Input -->
+        <label for="favcolor">Favorite Color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+        <!-- Date Input -->
+        <label for="birthday">Birthday (Date):</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <!-- File Input -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+
+        <!-- Time Input -->
+        <label for="appt">Preferred Appointment Time (Time):</label>
+        <input type="time" id="appt" name="appt">
+
+        <!-- Month Input -->
+        <label for="month">Select Month:</label>
+        <input type="month" id="month" name="month">
+
+        <!-- Week Input -->
+        <label for="week">Select Week:</label>
+        <input type="week" id="week" name="week">
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

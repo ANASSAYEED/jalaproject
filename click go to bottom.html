@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll to Top and Bottom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        /* Apply smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling the links */
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            height: 1500px; /* Makes the page long */
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            margin-bottom: 50px;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Smooth Scroll Example</h1>
+
+    <!-- Link to go to the bottom of the page -->
+    <a href="#bottom">Click to go to bottom of the page</a>
+
+    <div class="content">
+        <p>
+            This is a long page filled with content to demonstrate smooth scrolling. 
+            Scroll down to see more content and use the links to quickly navigate between the top and bottom.
+        </p>
+        <p>
+            Keep scrolling or use the "Click to go to bottom" link to jump directly to the footer.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
+            Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. 
+            Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+        </p>
+        <!-- Add more content to make the page longer -->
+        <p>More content1...</p>
+        <p>More content2...</p>
+        <p>More content3...</p>
+        <p>More content4...</p>
+        <p>More content5...</p>
+        <p>More content6...</p>
+        <p>More content7...</p>
+        <p>More content8...</p>
+    </div>
+
+    <!-- Footer with a link to go back to the top -->
+    <footer id="bottom">
+        <p>You've reached the bottom!</p>
+        <a href="#top">Click to go to top of the page</a>
+    </footer>
+
+</body>
+</html>
+
+<!--Output:
+
+    The page smoothly scrolls between the top and bottom when clicking the respective links. The smooth scrolling behavior is triggered by the CSS scroll-behavior:
+     smooth; rule applied to the html element.-->

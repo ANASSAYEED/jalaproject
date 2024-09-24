@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Fruits Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fruits List</h1>
+    <!-- Unordered List to Display Fruits -->
+    <ul id="fruits-list">
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+    </ul>
+
+    <!-- Button to Sort the Array in Descending Order -->
+    <button onclick="sortFruits()">Sort Fruits in Descending Order</button>
+
+    <script>
+        // Array of fruits
+        const fruits = ['Banana', 'Apple', 'Orange', 'Mango', 'Grapes'];
+
+        // Function to sort fruits in descending order and update the list
+        function sortFruits() {
+            // Sort the array in descending order
+            fruits.sort((a, b) => b.localeCompare(a));
+
+            // Get the ul element by its ID
+            const fruitsList = document.getElementById('fruits-list');
+
+            // Clear the current list
+            fruitsList.innerHTML = '';
+
+            // Loop through the sorted fruits array and add each item as an li element
+            fruits.forEach(fruit => {
+                const li = document.createElement('li');
+                li.textContent = fruit;
+                fruitsList.appendChild(li);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding vs Margin Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Box with padding */
+        .padding-box {
+            background-color: lightblue;
+            padding: 20px; /* Inside spacing */
+            border: 2px solid blue;
+            margin-bottom: 30px; /* Outside spacing */
+        }
+
+        /* Box with margin */
+        .margin-box {
+            background-color: lightgreen;
+            margin: 40px; /* Outside spacing */
+            padding: 10px; /* Inside spacing */
+            border: 2px solid green;
+        }
+
+        /* Box with both padding and margin */
+        .both-box {
+            background-color: lightcoral;
+            margin: 50px; /* Outside spacing */
+            padding: 30px; /* Inside spacing */
+            border: 2px solid red;
+        }
+
+        /* Add extra margin for clarity */
+        .extra-margin {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Padding vs Margin</h1>
+
+    <div class="container">
+        <!-- Box with padding -->
+        <div class="padding-box">
+            <p>This box has <strong>20px padding</strong>, creating space between the content and the border.</p>
+        </div>
+
+        <!-- Box with margin -->
+        <div class="margin-box">
+            <p>This box has <strong>40px margin</strong>, creating space outside the border between this box and others.</p>
+        </div>
+
+        <!-- Box with both margin and padding -->
+        <div class="both-box">
+            <p>This box has <strong>50px margin</strong> and <strong>30px padding</strong>, creating space inside the border and outside the box.</p>
+        </div>
+
+        <!-- Extra example to see the separation more clearly -->
+        <div class="both-box extra-margin">
+            <p>This is another box with margin and padding to show how boxes are separated from each other.</p>
+        </div>
+    </div>
+
+</body>
+</html>

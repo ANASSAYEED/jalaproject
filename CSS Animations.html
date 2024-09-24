@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations and Pagination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        /* CSS Animation */
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            margin: 0 auto 40px;
+            border-radius: 10px;
+            animation-name: bounce;          /* Name of the animation */
+            animation-duration: 2s;          /* Animation duration */
+            animation-iteration-count: 3;    /* How many times it repeats */
+            animation-delay: 1s;             /* Delay before starting */
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        /* Pagination with spaces */
+        .pagination-space a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        /* Pagination without spaces */
+        .pagination-nospace a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 1px solid #ddd;
+            margin: 0; /* No space between */
+        }
+
+        /* Hover effect for pagination */
+        .pagination-space a:hover, .pagination-nospace a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Clear floats */
+        .pagination:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animations and Pagination</h1>
+
+    <!-- Animated box example -->
+    <div class="animated-box"></div>
+
+    <!-- Pagination with spaces -->
+    <h2>Pagination with Spaces</h2>
+    <div class="pagination pagination-space">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+
+    <!-- Pagination without spaces -->
+    <h2>Pagination without Spaces</h2>
+    <div class="pagination pagination-nospace">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+
+</body>
+</html>

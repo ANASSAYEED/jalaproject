@@ -1,0 +1,49 @@
+/* Set up a full-page background image */
+body {
+    background-image: url('background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Scale the image to cover the entire page */
+    background-attachment: fixed; /* Ensure the image does not scroll with the page */
+    background-position: center; /* Center the image on the page */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the header */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Larger padding for the header */
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Section styling */
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for sections */
+    color: #333;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Second section with a different background color */
+section:nth-of-type(2) {
+    background-color: rgba(100, 149, 237, 0.8); /* Light blue background */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Positioned relative to the content */
+    bottom: 0;
+    width: 100%;
+}

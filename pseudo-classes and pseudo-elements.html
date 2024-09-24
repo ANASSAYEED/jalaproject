@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basics HTML Page with Pseudo-Classes and Pseudo-Elements</title>
+    <style>
+        /* Pseudo-classes */
+
+        /* Change the color of links when hovered */
+        a:hover {
+            color: green;
+        }
+
+        /* Style the first list item differently */
+        li:first-child {
+            color: red;
+        }
+
+        /* Style visited links */
+        a:visited {
+            color: purple;
+        }
+
+        /* Change the background of the form input when it's focused */
+        input:focus {
+            background-color: lightyellow;
+        }
+
+        /* Pseudo-elements */
+
+        /* Add content before a heading using ::before */
+        h1::before {
+            content: "★ ";
+            color: gold;
+        }
+
+        /* Add content after a paragraph using ::after */
+        p::after {
+            content: " - End of Paragraph";
+            font-style: italic;
+            color: gray;
+        }
+
+        /* Style the first letter of the blockquote */
+        blockquote::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Links to Different Sections of the Page -->
+    <nav>
+        <ul>
+            <li><a href="#section1">Go to Heading Section</a></li>
+            <li><a href="#section2">Go to List Section</a></li>
+            <li><a href="#section3">Go to Form Section</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section 1: Headings -->
+    <h1 id="section1">This is a Main Heading (H1)</h1>
+    <h2>This is a Subheading (H2)</h2>
+    <h3>This is a smaller heading (H3)</h3>
+
+    <!-- Paragraph -->
+    <p>This is a paragraph under the heading section.</p>
+
+    <!-- Section 2: Unordered List -->
+    <h3 id="section2">Things I like to do:</h3>
+    <ul>
+        <li>movies</li>
+        <li>gym</li>
+        <li>Programming</li>
+    </ul>
+
+    <!-- Section 3: Form with Label -->
+    <h3 id="section3">Subscribe to Newsletter</h3>
+    <form>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <input type="submit" value="Subscribe">
+    </form>
+
+    <!-- Blockquote Example -->
+    <blockquote>
+        "This is a blockquote, typically used to indicate a large block of quoted text."
+    </blockquote>
+
+</body>
+</html>

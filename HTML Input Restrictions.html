@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Restrictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            text-align: center;
+        }
+        .form-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .form-container input[type="submit"] {
+            width: auto;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Input Field Restrictions</h1>
+    <form action="#" method="POST">
+        <!-- Disabled Input -->
+        <label for="disabledField">Disabled Field:</label>
+        <input type="text" id="disabledField" name="disabledField" value="Cannot be edited" disabled>
+
+        <!-- Max and Min Attributes for Number Input -->
+        <label for="age">Age (min: 18, max: 65):</label>
+        <input type="number" id="age" name="age" min="18" max="65" placeholder="Enter your age" required>
+
+        <!-- Maxlength and Size for Text Input -->
+        <label for="username">Username (Maxlength: 10, Size: 20):</label>
+        <input type="text" id="username" name="username" maxlength="10" size="20" placeholder="Enter your username" required>
+
+        <!-- Readonly Input -->
+        <label for="readonlyField">Readonly Field:</label>
+        <input type="text" id="readonlyField" name="readonlyField" value="This cannot be changed" readonly>
+
+        <!-- Required Input -->
+        <label for="email">Email (Required):</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Input with a Default Value -->
+        <label for="defaultValue">Default Value Field:</label>
+        <input type="text" id="defaultValue" name="defaultValue" value="Predefined text" required>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            margin: 20px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px 0;
+            width: 200px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form Validation Example</h1>
+    <form id="myForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+        <div class="error" id="error-message"></div>
+    </form>
+
+    <script>
+        // Function to validate form
+        function validateForm(event) {
+            const nameInput = document.getElementById('name');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Clear any previous error message
+            errorMessage.textContent = '';
+
+            // Check if the text box is empty
+            if (nameInput.value.trim() === '') {
+                event.preventDefault(); // Prevent form submission
+                errorMessage.textContent = 'Name is required!';
+                nameInput.focus(); // Set focus back to the input field
+            }
+        }
+
+        // Add event listener to the form
+        document.getElementById('myForm').addEventListener('submit', validateForm);
+    </script>
+
+</body>
+</html>

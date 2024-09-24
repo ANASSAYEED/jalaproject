@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting Example</title>
+</head>
+<body>
+
+    <h1>JavaScript Variable Hoisting</h1>
+
+    <!-- Button to trigger the hoisting example -->
+    <button onclick="hoistingExample()">Show Hoisting Example</button>
+
+    <!-- Div to show the output -->
+    <div id="output"></div>
+
+    <script>
+        function hoistingExample() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';  // Clear any previous content
+
+            // Trying to access 'x' before declaration
+            outputDiv.innerHTML += `<p>Value of 'x' before declaration: ${x}</p>`;
+
+            // Now we declare and initialize the variable
+            var x = 5;  // Variable declaration and initialization
+
+            outputDiv.innerHTML += `<p>Value of 'x' after declaration and initialization: ${x}</p>`;
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!--JAVASCRIPT OUTPUT HEAR  
+Value of 'x' before declaration: undefined
+Value of 'x' after declaration and initialization: 5
+-->

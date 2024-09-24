@@ -1,0 +1,73 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Use Arial font for the body text */
+    background-color: #f4f4f4; /* Light gray background for the entire page */
+    margin: 0; /* Remove default margins around the page */
+    padding: 0; /* Remove default padding around the page */
+    line-height: 1.6; /* Set a comfortable line height for text */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark background color for the header */
+    color: white; /* White text color for the header */
+    padding: 20px; /* Space inside the header area */
+    text-align: center; /* Center-align the header content */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin for the heading to avoid extra spacing */
+}
+
+/* Navigation menu styles */
+nav ul {
+    background-color: #444; /* Darker background for the navigation bar */
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove padding around the list */
+    margin: 0; /* Remove margin around the list */
+    display: flex; /* Display list items in a row (horizontal) */
+    justify-content: center; /* Center the navigation items horizontally */
+}
+
+/* Individual navigation list items */
+nav ul li {
+    margin: 0 10px; /* Add horizontal space between each navigation item */
+}
+
+/* Navigation links styles */
+nav ul li a {
+    color: white; /* White color for the text of the navigation links */
+    text-decoration: none; /* Remove underlining from the links */
+    padding: 10px 20px; /* Add space inside the links */
+    display: block; /* Ensure links take up the full block size for padding to apply */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #555; /* Slightly lighter background when hovering over links */
+}
+
+/* Main content section styles */
+section {
+    padding: 20px; /* Add padding inside the content area */
+    background-color: #fff; /* White background for the content */
+    margin: 20px; /* Space between the content section and the edges of the page */
+    border-radius: 8px; /* Slightly round the corners of the content box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the content */
+}
+
+section p {
+    font-size: 18px; /* Slightly larger font size for paragraphs */
+    color: #333; /* Dark gray color for the text */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: white; /* White text color for the footer */
+    text-align: center; /* Center-align the footer content */
+    padding: 10px 0; /* Add vertical padding inside the footer */
+    position: fixed; /* Fix the footer at the bottom of the viewport */
+    width: 100%; /* Ensure the footer spans the full width of the page */
+    bottom: 0; /* Position the footer at the very bottom of the page */
+}

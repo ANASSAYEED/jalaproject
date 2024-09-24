@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Services Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body ng-controller="MainController">
+
+    <h1>AngularJS Services Example</h1>
+
+    <h3>Current URL: {{ currentUrl }}</h3>
+    
+    <h3>API Data:</h3>
+    <pre>{{ apiData | json }}</pre>
+
+    <button ng-click="fetchData()">Fetch Data from API</button>
+    <button ng-click="startTimeout()">Start Timeout</button>
+    <p>{{ timeoutMessage }}</p>
+
+    <h3>Custom Service Output: {{ customMessage }}</h3>
+
+    <script>
+        // Define the AngularJS module
+        const app = angular.module('myApp', []);
+
+        // Define the custom service
+        app.service('CustomService', function() {
+            this.getMessage = function() {
+                return 'This is a message from the Custom Service!';
+            };
+        });
+
+        // Define the main controller
+        app.controller('MainController', ['$scope', '$location', '$http', '$timeout', 'CustomService', 
+        function($scope, $location, $http, $timeout, CustomService) {
+            // Get the current URL
+            $scope.currentUrl = $location.absUrl();
+
+            // Initialize API data
+            $scope.apiData = null;
+
+            // Fetch data from a sample API
+            $scope.fetchData = function() {
+                $http.get('https://jsonplaceholder.typicode.com/posts/1')
+                    .then(function(response) {
+                        $scope.apiData = response.data;
+                    })
+                    .catch(function(error) {
+                        console.error('Error fetching data:', error);
+                    });
+            };
+
+            // Use $timeout to set a message after 3 seconds
+            $scope.startTimeout = function() {
+                $timeout(function() {
+                    $scope.timeoutMessage = 'This message appears after 3 seconds!';
+                }, 3000);
+            };
+
+            // Use the custom service
+            $scope.customMessage = CustomService.getMessage();
+        }]);
+    </script>
+
+</body>
+</html>
+
+<!--Output:
+
+    The output will show the current URL, API data (once fetched), and the 
+    timeout message after 3 seconds, as well as a message from the custom service.-->

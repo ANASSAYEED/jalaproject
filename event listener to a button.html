@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #date-time {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Display Current Date and Time</h1>
+    <button id="dateButton">Show Current Date and Time</button>
+    <div id="date-time"></div>
+
+    <script>
+        // Function to display current date and time
+        function displayDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString(); // Formats date and time
+            document.getElementById('date-time').textContent = dateTimeString;
+        }
+
+        // Add event listener to the button
+        document.getElementById('dateButton').addEventListener('click', displayDateTime);
+    </script>
+
+</body>
+</html>

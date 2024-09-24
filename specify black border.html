@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapse borders */
+            border: 2px solid black; /* Black border for the table */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid black; /* Border for table cells */
+        }
+
+        /* Change background color on hover */
+        table:hover {
+            background-color: lightblue; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Table with Hover Effect</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>28</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>32</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>45</td>
+                <td>Chicago</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+
+<!--Output:
+
+When you hover over the table, the background color will change to light blue, providing a clear visual effect. This simple program demonstrates the use of CSS for 
+styling tables and applying hover effects.-->

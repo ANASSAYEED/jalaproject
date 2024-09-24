@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Background Images</title>
+    <style>
+        /* Styling the body with a single background image */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Section with multiple background images */
+        .multiple-backgrounds {
+            height: 500px;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+            
+            /* Applying multiple background images */
+            background-image: 
+                url('https://via.placeholder.com/300x200/007bff/ffffff?text=Image1'), 
+                url('https://via.placeholder.com/150x150/ff6347/ffffff?text=Image2');
+            
+            /* Adjusting the size of each background image */
+            background-size: 
+                100px 100px,  /* First image size */
+                50px 50px;    /* Second image size */
+            
+            /* Adjusting the position of each background image */
+            background-position: 
+                left top,  /* First image position */
+                right bottom; /* Second image position */
+            
+            /* Prevent background images from repeating */
+            background-repeat: no-repeat, no-repeat;
+
+            /* Background color behind the images */
+            background-color: #343a40;
+        }
+
+        /* Styling a section for additional content */
+        .content {
+            padding: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Webpage with Multiple Background Images</h1>
+
+    <section class="multiple-backgrounds">
+        <p>This section has two background images.</p>
+        <p>The first is positioned at the top-left and the second is at the bottom-right.</p>
+        <p>Each image has a defined size and does not repeat.</p>
+    </section>
+
+    <section class="content">
+        <p>This is a simple webpage to demonstrate the usage of multiple background images in CSS. By applying background images in CSS, we can create visually interesting elements that combine multiple graphical layers. Each background image can have its size, position, and behavior specified independently.</p>
+        <p>In this example, two placeholder images are used: one larger and placed at the top-left, and a smaller one at the bottom-right. The size and position of these background images are customized using the `background-size` and `background-position` properties.</p>
+    </section>
+
+</body>
+</html>

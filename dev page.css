@@ -1,0 +1,105 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Title Styling */
+.title {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 28px;
+    color: #555;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Font Styles Section */
+.italic-text {
+    font-style: italic;
+    font-size: 18px;
+    color: #000;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.normal-text {
+    font-style: normal;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Font Sizes Section */
+.small-text {
+    font-size: 12px;
+    color: #333;
+}
+
+.medium-text {
+    font-size: 20px;
+    color: #333;
+}
+
+.large-text {
+    font-size: 30px;
+    color: #333;
+}
+
+/* Font Families and Colors Section */
+.sans-serif-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: blue;
+}
+
+.serif-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: darkred;
+}
+
+.monospace-text {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: green;
+}
+
+/* Text Alignment Section */
+.left-align {
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.center-align {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.right-align {
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 16px;
+    text-align: center;
+    color: #999;
+    margin-top: 40px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Lowercase and Uppercase Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body ng-controller="MainController">
+
+    <h1>AngularJS Lowercase and Uppercase Example</h1>
+
+    <label for="inputText">Enter Text:</label>
+    <input type="text" id="inputText" ng-model="inputText" placeholder="Type something...">
+
+    <button ng-click="convertText()">Convert</button>
+
+    <h3>Lowercase: {{ lowercaseText }}</h3>
+    <h3>Uppercase: {{ uppercaseText }}</h3>
+
+    <script>
+        // Define the AngularJS module
+        const app = angular.module('myApp', []);
+
+        // Define the main controller
+        app.controller('MainController', ['$scope', function($scope) {
+            $scope.inputText = '';
+            $scope.lowercaseText = '';
+            $scope.uppercaseText = '';
+
+            // Function to convert text to lowercase and uppercase
+            $scope.convertText = function() {
+                $scope.lowercaseText = angular.lowercase($scope.inputText);
+                $scope.uppercaseText = angular.uppercase($scope.inputText);
+            };
+        }]);
+    </script>
+
+</body>
+</html>
+
+
+<!--Output:
+
+    After entering text and clicking the button, you'll see the original text converted to 
+    lowercase and uppercase displayed on the page.-->

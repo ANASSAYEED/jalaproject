@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Filters Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body ng-controller="MainController">
+
+    <h1>AngularJS Filters Example</h1>
+
+    <h2>Original Text: {{ text }}</h2>
+
+    <h3>Uppercase: {{ text | uppercase }}</h3>
+    <h3>Lowercase: {{ text | lowercase }}</h3>
+    <h3>Date: {{ today | date:'fullDate' }}</h3>
+    <h3>Number: {{ numberValue | number:2 }}</h3>
+
+    <h3>Custom Filter Output: {{ text | customFilter }}</h3>
+
+    <script>
+        // Define the AngularJS module
+        const app = angular.module('myApp', []);
+
+        // Define the main controller
+        app.controller('MainController', ['$scope', function($scope) {
+            $scope.text = "Hello, AngularJS!";
+            $scope.today = new Date();
+            $scope.numberValue = 12345.6789;
+        }]);
+
+        // Define a custom filter
+        app.filter('customFilter', function() {
+            return function(input) {
+                return input + ' - Custom Filter Applied!';
+            };
+        });
+    </script>
+
+</body>
+</html>
+
+<!--Output:
+
+The output will show:
+
+    The original text and its transformations (uppercase and lowercase).
+    The current date in full format.
+    The formatted number.
+    The result of the custom filter with a message appended.-->

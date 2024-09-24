@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Table with JSON Data</title>
+    <!-- Include AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #eef;
+        }
+    </style>
+</head>
+<body ng-controller="MainController">
+
+    <h1>AngularJS Table with JSON Data, Filters, and $index, $odd, $even</h1>
+
+    <!-- Search and sort controls -->
+    <input type="text" ng-model="searchText" placeholder="Search..." />
+    <br><br>
+    <label for="sort">Sort by:</label>
+    <select ng-model="sortColumn">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+        <option value="city">City</option>
+    </select>
+    <label>
+        <input type="radio" ng-model="reverseSort" value="false"> Ascending
+    </label>
+    <label>
+        <input type="radio" ng-model="reverseSort" value="true"> Descending
+    </label>
+
+    <!-- Table with JSON data -->
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in people | filter:searchText | orderBy:sortColumn:reverseSort" ng-class="{oddRow: $odd, evenRow: $even}">
+                <td>{{$index + 1}}</td> <!-- $index to show the row number -->
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.city}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

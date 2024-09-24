@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call() and apply() Example</title>
+</head>
+<body>
+
+    <h1>call() and apply() Method Demo</h1>
+    
+    <script>
+        // Function to be invoked
+        function introduce(greeting, punctuation) {
+            console.log(greeting + ", my name is " + this.name + punctuation);
+        }
+
+        // Object 1
+        const person1 = {
+            name: "Alice"
+        };
+
+        // Object 2
+        const person2 = {
+            name: "Bob"
+        };
+
+        // Invoking introduce() using call()
+        introduce.call(person1, "Hello", "!"); // Output: "Hello, my name is Alice!"
+
+        // Invoking introduce() using apply()
+        introduce.apply(person2, ["Hi", "."]); // Output: "Hi, my name is Bob."
+
+        // Spotting the difference
+        console.log("The difference between call() and apply() is in how the arguments are passed.");
+    </script>
+
+</body>
+</html>

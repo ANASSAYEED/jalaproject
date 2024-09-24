@@ -1,0 +1,29 @@
+/* Styling the box with different borders on each side */
+.border-box {
+    width: 400px; /* Fixed width for the box */
+    margin: 50px auto; /* Center the box horizontally */
+    padding: 20px; /* Space inside the box */
+    text-align: center; /* Center the text inside the box */
+    font-family: Arial, sans-serif;
+    
+    /* Setting different border properties for each side */
+    border-top: 8px dotted red;        /* Dotted red border on top */
+    border-right: 5px solid green;     /* Solid green border on the right */
+    border-bottom: 10px dashed blue;   /* Dashed blue border at the bottom */
+    border-left: 12px double purple;   /* Double purple border on the left */
+    
+    background-color: #f9f9f9; /* Light background to contrast with the borders */
+}
+
+/* Header and paragraph styling inside the box */
+.border-box h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.border-box p {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}

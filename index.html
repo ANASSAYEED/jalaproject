@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Module with Directive and Controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        .color-box {
+            width: 200px;
+            height: 50px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body ng-controller="MainController">
+
+    <h1>Color Box Directive</h1>
+    <input type="text" ng-model="color" placeholder="Enter a color value" />
+    <color-box color="color"></color-box>
+
+    <script>
+        // The app.js file will be included here
+    </script>
+</body>
+</html>

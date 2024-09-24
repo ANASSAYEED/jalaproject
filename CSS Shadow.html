@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Effects on Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        /* Image container */
+        .image-box {
+            display: inline-block;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            transition: all 0.3s ease; /* Smooth transition on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+        }
+        /* Shadow effect on hover */
+        .image-box:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+            transform: scale(1.05); /* Slight zoom effect */
+        }
+        /* Image styling */
+        .image-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image with Shadow Effect and Hover</h1>
+
+    <!-- Image container with shadow effects -->
+    <div class="image-box">
+        <img src="https://via.placeholder.com/400" alt="Sample Image">
+    </div>
+
+</body>
+</html>

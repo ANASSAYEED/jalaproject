@@ -1,0 +1,20 @@
+<script>
+    // Define the AngularJS module
+    var app = angular.module('myApp', []);
+
+    // Define the controller and inject the $scope object
+    app.controller('MainController', function($scope) {
+        // Sample JSON data
+        $scope.people = [
+            {"name": "John Doe", "age": 28, "city": "New York"},
+            {"name": "Jane Smith", "age": 22, "city": "Los Angeles"},
+            {"name": "Mike Johnson", "age": 35, "city": "Chicago"},
+            {"name": "Emily Davis", "age": 42, "city": "Houston"},
+            {"name": "William Brown", "age": 30, "city": "Phoenix"}
+        ];
+
+        // Default sort settings
+        $scope.sortColumn = 'name'; // Default sorting by 'name'
+        $scope.reverseSort = false; // Default sort order (ascending)
+    });
+</script>

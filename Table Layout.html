@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table Layout Created by anas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        /* Fixed table layout */
+        .fixed-layout {
+            table-layout: fixed;
+        }
+        /* Auto table layout */
+        .auto-layout {
+            table-layout: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Table Layout Example</h1>
+
+    <h2>Fixed Table Layout</h2>
+    <table class="fixed-layout">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is a longer text that will be truncated.</td>
+                <td>Short</td>
+                <td>Some more text</td>
+            </tr>
+            <tr>
+                <td>Another long text that won't change the column width.</td>
+                <td>Text</td>
+                <td>Example</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Auto Table Layout</h2>
+    <table class="auto-layout">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is a longer text that will stretch the column.</td>
+                <td>Short</td>
+                <td>Some more text</td>
+            </tr>
+            <tr>
+                <td>Another long text that will adjust the column width.</td>
+                <td>Text</td>
+                <td>Example</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

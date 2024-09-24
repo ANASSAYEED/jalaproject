@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Scope Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div ng-controller="FirstController" class="box">
+        <h2>First Controller</h2>
+        <p>Message: {{ message }}</p>
+        <input type="text" ng-model="newMessage" placeholder="Update message" />
+        <button ng-click="updateMessage()">Update Message</button>
+    </div>
+
+    <div ng-controller="SecondController" class="box">
+        <h2>Second Controller</h2>
+        <p>Root Message: {{ rootMessage }}</p>
+        <p>First Message from $scope: {{ message }}</p>
+    </div>
+
+    <script>
+        // The app.js file will be included here
+    </script>
+</body>
+</html>
