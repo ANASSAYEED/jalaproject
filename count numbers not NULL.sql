@@ -1,0 +1,3 @@
+SELECT COUNT(DISTINCT city)
+FROM customers
+WHERE city IS NOT NULL;

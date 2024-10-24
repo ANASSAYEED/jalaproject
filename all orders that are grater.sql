@@ -1,0 +1,4 @@
+SELECT *
+FROM orders
+WHERE amt > (SELECT AVG(amt) FROM orders WHERE odate = '1994-10-03') 
+  AND odate = '1994-10-03';

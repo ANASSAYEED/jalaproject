@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM Orders
+WHERE odate = '1994-10-03';
